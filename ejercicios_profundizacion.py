@@ -16,6 +16,14 @@ __email__ = "alumnos@inove.com.ar"
 __version__ = "1.3"
 
 
+import mis_funciones
+from mis_funciones import promedio
+from mis_funciones import ordenar
+from mis_funciones import count
+from mis_funciones import contar
+from mis_funciones import lista_aleatoria
+from mis_funciones import random
+
 def ej1():
     print('Comencemos a crear lo nuestro!')
 
@@ -54,6 +62,16 @@ def ej2():
     de números generados.
     Imprimir en pantalla la lista ordenada
     '''
+    inicio = 0
+    fin = 6
+    cantidad = 5
+    mi_lista_aleatorio = []
+    mi_lista_aleatorio = lista_aleatoria(inicio, fin, cantidad)
+    print("mi 5 tiros son:", mi_lista_aleatorio)
+
+    ordenar(mi_lista_aleatorio)
+    lista_ordenada = mi_lista_aleatorio
+    print("los numeros ordenados son:", lista_ordenada)
 
 
 def ej3():
@@ -87,7 +105,23 @@ def ej3():
     vistos en clase para ver como se implementa max con esa key
 
     '''
+    inicio = 1
+    fin = 6
+    cantidad = 5
+    mi_lista_aleatorio = []
+    mi_lista_aleatorio = lista_aleatoria(inicio, fin, cantidad)
+    print("mi 5 tiros son:", mi_lista_aleatorio)
 
+    
+    print("el numero 1 aparece", contar(mi_lista_aleatorio, 1), "Vez/veces")
+    print("el numero 2 aparece", contar(mi_lista_aleatorio, 2), "Vez/veces")
+    print("el numero 3 aparece", contar(mi_lista_aleatorio, 3), "Vez/veces")
+    print("el numero 4 aparece", contar(mi_lista_aleatorio, 4), "Vez/veces")
+    print("el numero 5 aparece", contar(mi_lista_aleatorio, 5), "Vez/veces")
+    print("el numero 6 aparece", contar(mi_lista_aleatorio, 6), "Vez/veces")
+
+    max_repeticiones = max(mi_lista_aleatorio, key=mi_lista_aleatorio.count)
+    print('La palabra con repetición en la lista', max_repeticiones)
 
 def ej4():
     print("Ahora sí! buena suerte :)")
@@ -151,4 +185,4 @@ if __name__ == '__main__':
     # ej1()
     # ej2()
     # ej3()
-    # ej4()
+    ej4()

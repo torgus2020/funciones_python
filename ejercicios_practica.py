@@ -44,6 +44,11 @@ def lista_aleatoria(inicio, fin, cantidad):
         lista.append(numero)
     return lista
 
+def count(numeros):
+    contador = numeros.count()
+    contar = contador
+    return contar
+
 
 
     # Alumno:
@@ -72,7 +77,7 @@ def ej2():
         promedio_re = promedio(numeros)
         print("el promedio es", promedio_re)
         
-        
+    
         
 
 
@@ -210,7 +215,7 @@ def ej5():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     # ej1()
-    #ej2()
+    ej2()
     #ej3()
     #ej4()
-    # ej5()
+    #ej5()
